@@ -9,7 +9,11 @@ export class Cpf {
     }
 
     this.cpf = this.discoverVerifierDigits();
-    return this.cpf;
+
+    const regex = /(\d{3})(\d{3})(\d{3})(\d{2})/;
+    const formattedCpf = this.cpf.replace(regex, "$1.$2.$3-$4");
+
+    return formattedCpf;
   }
 
   public isValid(): boolean {
