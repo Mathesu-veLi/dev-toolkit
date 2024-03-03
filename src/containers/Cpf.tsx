@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
@@ -12,6 +11,7 @@ import {
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
+import { CpfGenerator } from "@/components/CpfGenerator";
 
 const formSchema = z.object({
   cpf: z.string().min(11).max(11),
@@ -20,8 +20,6 @@ const formSchema = z.object({
 type TFormSchema = z.infer<typeof formSchema>;
 
 export function Cpf() {
-  const [cpf, setCpf] = useState<string>("000.000.000-00");
-
   const form = useForm<TFormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -31,14 +29,13 @@ export function Cpf() {
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 h-full">
-      <div className="flex flex-col gap-4 justify-center items-center border p-5 w-80">
-        <h1 className="text-xl font-semibold tracking-wider">CPF Generator</h1>
-        <p className="text-lg">{cpf}</p>
-        <Button onClick={() => setCpf(generateCpf())}>Generate</Button>
-      </div>
       <div>
+        <CpfGenerator />
         <Form {...form}>
-          <form className="flex flex-col gap-4 justify-center items-center border p-5" onSubmit={form.handleSubmit(validateForm)}>
+          <form
+            className="flex flex-col gap-4 justify-center items-center border p-5"
+            onSubmit={form.handleSubmit(validateForm)}
+          >
             <h1 className="text-xl font-semibold tracking-wider">
               CPF Validator
             </h1>
