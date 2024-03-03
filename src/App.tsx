@@ -1,22 +1,39 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Home } from "./components/Home";
+import { Header } from "./components/Header";
+
+interface IRoute {
+  path: string;
+  element: JSX.Element;
+}
 
 function App() {
-  const [count, setCount] = useState(0);
+  const routes: IRoute[] = [];
+
+  routes.push({
+    path: "/",
+    element: <Home />,
+  });
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Header />
+        <ToastContainer theme="dark" />
+        <Routes>
+          {routes.map((route) => {
+            return (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={route.element}
+              />
+            );
+          })}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
