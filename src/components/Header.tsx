@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header>
-      <nav className="flex lg:justify-center lg:border-b py-4 justify-around items-center mb-5">
+      <nav className="absolute flex lg:justify-center lg:border-b py-4 justify-around items-center w-full">
         <div className="lg:absolute lg:w-11/12 lg:-z-10">
           <Link to="/">DEV Toolkit</Link>
         </div>
