@@ -1,12 +1,12 @@
 import { Cpf } from "./cpf";
 
-describe("Validate Cpf", () => {
-  test("checks if an invalid cpf is marked as invalid", () => {
+describe("Validate CPF", () => {
+  test("should return false to a invalid CPF", () => {
     const cpf = new Cpf("123.456.789-10");
     expect(cpf.isValid()).toBeFalsy();
   });
 
-  test("checks if an valid cpf is marked as valid", () => {
+  test("should return true to a valid CPF", () => {
     const cpf = new Cpf("491.550.570-71");
     expect(cpf.isValid()).toBeTruthy();
   });
