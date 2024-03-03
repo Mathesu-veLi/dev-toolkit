@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Home } from "./components/Home";
 import { Header } from "./components/Header";
+import { Cpf } from "./components/Cpf";
 
 interface IRoute {
   path: string;
@@ -15,6 +16,11 @@ function App() {
   routes.push({
     path: "/",
     element: <Home />,
+  });
+
+  routes.push({
+    path: "/cpf",
+    element: <Cpf />,
   });
 
   return (
