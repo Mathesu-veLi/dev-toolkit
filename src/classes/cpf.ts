@@ -1,21 +1,34 @@
 export class Cpf {
-  constructor(private cpf: string | undefined) {}
+  constructor(private cpf: string) {
+    this.cpf = this.cpf.replace(/\D+/g, "");
+  }
+
+  public generate() {
+    for (let c = 0; c < 10; c++) {
+      this.cpf += String(Math.floor(Math.random() * (9 - 0 + 1)));
+    }
+
+    this.cpf = this.discoverVerifierDigits();
+    return this.cpf;
+  }
 
   public isValid(): boolean {
-    if(!this.cpf) return false;
-
-    this.cpf = this.cpf.replace(/\D+/g, "");
     if (this.cpf.length !== 11) return false;
 
+    const fullCpf = this.discoverVerifierDigits();
+
+    if (fullCpf !== this.cpf) return false;
+    return true;
+  }
+
+  private discoverVerifierDigits(): string {
     const cpfArray = Array.from(this.cpf.substring(0, 9)).map((value) =>
       Number(value)
     );
 
     this.discoverDigit(cpfArray, 10);
     this.discoverDigit(cpfArray, 11);
-
-    if (cpfArray.join("") !== this.cpf) return false;
-    return true;
+    return cpfArray.join("");
   }
 
   private discoverDigit(array: number[], value: 10 | 11) {
