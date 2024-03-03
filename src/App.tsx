@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Home } from "./containers/Home";
 import { Header } from "./components/Header";
 import { Cpf } from "./containers/Cpf";
+import { Password } from "./containers/Password";
 
 interface IRoute {
   path: string;
@@ -20,6 +21,11 @@ function App() {
   routes.push({
     path: "/cpf",
     element: <Cpf />,
+  });
+
+  routes.push({
+    path: "/password",
+    element: <Password />,
   });
 
   return (
