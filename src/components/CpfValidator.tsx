@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Cpf } from "@/classes/cpf";
+import { useToast } from "./ui/use-toast";
 
 const formSchema = z.object({
   cpf: z.string().min(11).max(14),
@@ -27,16 +28,19 @@ export function CpfValidator() {
     },
   });
 
+  const { toast } = useToast();
+
   function verify(form: TFormSchema) {
     const cpf = new Cpf(form.cpf);
 
-    if (!cpf.isValid()) return false;
+    if (!cpf.isValid()) return toast({ title: "Invalid CPF" });
+    return toast({title: "Valid CPF"});
   }
 
   return (
     <Form {...form}>
       <form
-        className="flex flex-col gap-4 justify-center items-center border p-5"
+        className="flex flex-col gap-4 justify-center items-center border p-5 rounded-sm"
         onSubmit={form.handleSubmit(verify)}
       >
         <h1 className="text-xl font-semibold tracking-wider">CPF Validator</h1>

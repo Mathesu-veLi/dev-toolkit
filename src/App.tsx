@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Toaster } from "@/components/ui/toaster";
 import { Home } from "./containers/Home";
 import { Header } from "./components/Header";
 import { Cpf } from "./containers/Cpf";
@@ -27,7 +26,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <ToastContainer theme="dark" />
+        <Toaster />
         <Routes>
           {routes.map((route) => {
             return (
