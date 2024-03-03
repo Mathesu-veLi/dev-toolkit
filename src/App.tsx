@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Home } from "./components/Home";
+import { Home } from "./containers/Home";
 import { Header } from "./components/Header";
-import { Cpf } from "./components/Cpf";
+import { Cpf } from "./containers/Cpf";
 
 interface IRoute {
   path: string;
