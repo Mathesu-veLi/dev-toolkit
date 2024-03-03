@@ -12,7 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Cpf } from "@/classes/cpf";
-import { useToast } from "./ui/use-toast";
+import { useToast } from "../ui/use-toast";
 
 const formSchema = z.object({
   cpf: z.string().min(11).max(14),

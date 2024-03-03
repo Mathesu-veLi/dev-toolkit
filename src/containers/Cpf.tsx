@@ -1,5 +1,5 @@
-import { CpfGenerator } from "@/components/CpfGenerator";
-import { CpfValidator } from "@/components/CpfValidator";
+import { CpfGenerator } from "@/components/Cpf/CpfGenerator";
+import { CpfValidator } from "@/components/Cpf/CpfValidator";
 
 export function Cpf() {
   return (
