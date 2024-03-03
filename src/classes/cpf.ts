@@ -1,9 +1,10 @@
 export class Cpf {
-  constructor(private cpf: string) {
-    this.cpf = cpf.replace(/\D+/g, "");
-  }
+  constructor(private cpf: string | undefined) {}
 
   public isValid(): boolean {
+    if(!this.cpf) return false;
+
+    this.cpf = this.cpf.replace(/\D+/g, "");
     if (this.cpf.length !== 11) return false;
 
     const cpfArray = Array.from(this.cpf.substring(0, 9)).map((value) =>
