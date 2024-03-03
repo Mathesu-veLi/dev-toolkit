@@ -11,6 +11,7 @@ import {
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
+import { Cpf } from "@/classes/cpf";
 
 const formSchema = z.object({
   cpf: z.string().min(11).max(14),
@@ -25,6 +26,12 @@ export function CpfValidator() {
       cpf: "",
     },
   });
+
+  function verify(form: TFormSchema) {
+    const cpf = new Cpf(form.cpf);
+
+    if (!cpf.isValid()) return false;
+  }
 
   return (
     <Form {...form}>
