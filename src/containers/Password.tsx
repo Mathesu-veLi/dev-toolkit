@@ -52,13 +52,13 @@ export function Password() {
             onValueChange={(e: IOptions[]) => setPasswordOptions(e)}
             value={passwordOptions}
           >
-            <ToggleGroupItem value="uppercase" title="Uppercase">
+            <ToggleGroupItem value="upper" title="Uppercase">
               A
             </ToggleGroupItem>
-            <ToggleGroupItem value="lowercase" title="Lowercase">
+            <ToggleGroupItem value="lower" title="Lowercase">
               a
             </ToggleGroupItem>
-            <ToggleGroupItem value="numbers" title="Numbers">
+            <ToggleGroupItem value="number" title="Numbers">
               1
             </ToggleGroupItem>
             <ToggleGroupItem value="symbol" title="Special characters">
