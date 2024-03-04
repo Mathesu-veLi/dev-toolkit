@@ -8,12 +8,13 @@ type IOptions = "lower" | "upper" | "number" | "symbol";
 export function Password() {
   const [password, setPassword] = useState<string>("passwoRd123!");
   const [passwordSize, setPasswordSize] = useState<number>(10);
-  const [passwordOptions, setPasswordOptions] = useState<IOptions[]>([]);
+  const [passwordOptions, setPasswordOptions] = useState<IOptions[]>(["lower"]);
 
   useEffect(() => {
     if (!passwordOptions.length) {
       setPasswordOptions(["lower"]);
     }
+    console.log("oi1");
   }, [passwordOptions]);
 
   return (
@@ -48,7 +49,7 @@ export function Password() {
           <ToggleGroup
             type="multiple"
             className="*:w-10"
-            onValueChange={(e) => setPasswordOptions(e)}
+            onValueChange={(e: IOptions[]) => setPasswordOptions(e)}
             value={passwordOptions}
           >
             <ToggleGroupItem value="uppercase" title="Uppercase">
