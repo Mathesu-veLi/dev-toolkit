@@ -11,6 +11,9 @@ export function Ip() {
       tempIp += generateRandomInt(0, 255);
     }
 
+    const regex = /(\d{1,3})(\d{1,3})(\d{1,3})(\d{1,3})/;
+    tempIp = tempIp.replace(regex, "$1.$2.$3.$4");
+
     return tempIp;
   }
 
