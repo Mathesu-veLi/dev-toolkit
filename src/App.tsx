@@ -4,7 +4,7 @@ import { Home } from "./containers/Home";
 import { Header } from "./components/Header";
 import { Cpf } from "./containers/Cpf";
 import { Password } from "./containers/Password";
-import { Ip } from "./components/Ip";
+import { Ip } from "./containers/Ip";
 
 interface IRoute {
   path: string;
