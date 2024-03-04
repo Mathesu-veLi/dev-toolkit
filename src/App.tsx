@@ -4,6 +4,7 @@ import { Home } from "./containers/Home";
 import { Header } from "./components/Header";
 import { Cpf } from "./containers/Cpf";
 import { Password } from "./containers/Password";
+import { Ip } from "./components/Ip";
 
 interface IRoute {
   path: string;
@@ -26,6 +27,11 @@ function App() {
   routes.push({
     path: "/password",
     element: <Password />,
+  });
+
+  routes.push({
+    path: "/ip",
+    element: <Ip />,
   });
 
   return (
