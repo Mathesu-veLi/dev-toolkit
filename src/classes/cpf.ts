@@ -1,3 +1,5 @@
+import { generateRandomInt } from "@/lib/utils";
+
 export class Cpf {
   constructor(private cpf: string) {
     this.cpf = this.cpf.replace(/\D+/g, "");
@@ -5,7 +7,7 @@ export class Cpf {
 
   public generate() {
     for (let c = 0; c < 10; c++) {
-      this.cpf += String(Math.floor(Math.random() * (9 - 0 + 1)));
+      this.cpf += String(generateRandomInt(0, 9));
     }
 
     this.cpf = this.discoverVerifierDigits();
