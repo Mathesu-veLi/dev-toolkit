@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { useEffect, useState } from "react";
 
 type IOptions = "lower" | "upper" | "number" | "symbol";
 
@@ -9,6 +10,11 @@ export function Password() {
   const [passwordSize, setPasswordSize] = useState<number>(10);
   const [passwordOptions, setPasswordOptions] = useState<IOptions[]>([]);
 
+  useEffect(() => {
+    if (!passwordOptions.length) {
+      setPasswordOptions(["lower"]);
+    }
+  }, [passwordOptions]);
 
   return (
     <div className="flex justify-center items-center h-full">
