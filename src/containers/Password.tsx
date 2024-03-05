@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useEffect, useState } from "react";
+import { generateRandomInt } from "@/lib/utils";
 
 type IOptions = "lower" | "upper" | "number" | "symbol";
 
@@ -10,12 +11,41 @@ export function Password() {
   const [passwordSize, setPasswordSize] = useState<number>(10);
   const [passwordOptions, setPasswordOptions] = useState<IOptions[]>(["lower"]);
 
+  function generatePassword() {
+    let tempPassword = "";
+    for (let i = 0; i < passwordSize; i++) {
+      let subPassword = "";
+
+      passwordOptions.forEach((option) => {
+        switch (option) {
+          case "lower":
+            subPassword += String.fromCharCode(generateRandomInt(97, 122));
+            break;
+          case "upper":
+            subPassword += String.fromCharCode(generateRandomInt(65, 90));
+            break;
+          case "number":
+            subPassword += String.fromCharCode(generateRandomInt(48, 57));
+            break;
+          case "symbol":
+            subPassword += String.fromCharCode(generateRandomInt(33, 47));
+            break;
+        }
+      });
+
+      tempPassword +=
+        subPassword[generateRandomInt(0, passwordOptions.length - 1)];
+    }
+    setPassword(tempPassword);
+  }
+
   useEffect(() => {
     if (!passwordOptions.length) {
       setPasswordOptions(["lower"]);
     }
-    console.log("oi1");
-  }, [passwordOptions]);
+
+    generatePassword();
+  }, [passwordOptions, passwordSize]);
 
   return (
     <div className="flex justify-center items-center h-full">
