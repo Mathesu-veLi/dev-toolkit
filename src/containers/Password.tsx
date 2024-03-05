@@ -24,12 +24,12 @@ export function Password() {
           <h1 className="text-xl font-semibold tracking-wider">
             Password Generator
           </h1>
-          <p className="text-lg">{password}</p>
+          <p className="text-lg max-w-80 break-words font-mono">{password}</p>
         </div>
         <div className="grid gap-7">
           <div className="flex flex-col justify-center items-center gap-4">
             <h2>Number of Characters</h2>
-            <div className="flex gap-4">
+            <div className="flex gap-4 w-64">
               <Input
                 type="number"
                 className="w-2/6"
