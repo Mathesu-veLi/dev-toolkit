@@ -34,10 +34,13 @@ export function Password() {
                 type="number"
                 className="w-2/6"
                 value={passwordSize}
+                max={25}
+                min={1}
                 onChange={(e) => setPasswordSize(Number(e.target.value))}
               />
               <Slider
-                max={50}
+                max={25}
+                min={1}
                 step={1}
                 className="w-4/6"
                 value={[passwordSize]}
