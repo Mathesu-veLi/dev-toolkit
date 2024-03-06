@@ -1,30 +1,69 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DEV Toolkit
 
-Currently, two official plugins are available:
+From devs to devs, the DEV Toolkit brings some tools that we sometimes need on a daily basis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Webiste:** https://devs-toolkit.vercel.app
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Features
+
+- Generate and validate CPF
+- Generate passwords with lowercase, uppercase, numbers and symbols
+- Generate IP address
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Mathesu-veLi/dev-toolkit.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory
+
+```bash
+  cd dev-toolkit
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Screenshots
+
+Home page:
+
+![Home page](https://i.ibb.co/YPpSZ7s/dev-home.png)
+
+
+CPF generator and validator page:
+
+![CPF page](https://i.ibb.co/wgQcDdR/dev-cpf.png)
+
+
+Password generator page:
+
+![Password page](https://i.ibb.co/Dr4pq9J/dev-password.png)
+
+
+IP generator page:
+
+![IP page](https://i.ibb.co/3fhZmDT/dev-ip.png)
+
+## Tech Stack
+
+**Client:** React, TailwindCSS, Shadcn/ui
+
