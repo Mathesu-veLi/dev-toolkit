@@ -6,7 +6,7 @@ From devs to devs, the DEV Toolkit brings some tools that we sometimes need on a
 ## Demo
 
 
-**Webiste:** https://devs-toolkit.vercel.app
+**Webiste:** https://devfordev.vercel.app
 
 
 ## Features
