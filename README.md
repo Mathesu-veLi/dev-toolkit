@@ -48,7 +48,7 @@
 ### 🔧 Steps
 
 ```bash
-git clone https://github.com/your-username/dev-toolkit.git
+git clone https://github.com/Mathesu-veLi/dev-toolkit.git
 cd dev-toolkit
 pnpm install
 ```
@@ -87,7 +87,7 @@ src/
 
 You can watch a demo of the Dev Toolkit on YouTube:
 
-👉 [📽️ Watch demo](https://www.youtube.com/your-demo-link)
+[![Watch the demo](https://img.youtube.com/vi/2PR0bKBoqZ4/0.jpg)](https://www.youtube.com/watch?v=2PR0bKBoqZ4)
 
 ---
 
@@ -98,8 +98,3 @@ This project is licensed under the terms specified in the [`LICENSE`](./LICENSE)
 ---
 
 Built with 💻 to streamline testing and automation for developers!
-```
-
----
-
-Se quiser, posso converter esse conteúdo em um arquivo `.md` e te enviar assim que os recursos voltarem ao normal. Deseja que eu te avise quando puder fazer isso?
