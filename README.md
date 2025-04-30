@@ -1,69 +1,105 @@
+# 🧰 Dev Toolkit
 
-# DEV Toolkit
+**Dev Toolkit** is an interactive frontend application focused on utilities for developers and testers. It provides tools to generate and validate data like CPF numbers (Brazilian taxpayer registry), secure passwords, and IP addresses — all within a clean, responsive, and modular interface.
 
-From devs to devs, the DEV Toolkit brings some tools that we sometimes need on a daily basis
+## 📜 Table of Contents
 
-## Demo
+- [✨ Features](#-features)
+- [🛠 Technologies Used](#-technologies-used)
+- [📦 Installation](#-installation)
+  - [⚙ Requirements](#-requirements)
+- [▶️ Running the Project](#-running-the-project)
+- [📁 Project Structure](#-project-structure)
+- [🧪 Testing](#-testing)
+- [🎥 Demo](#-demo)
+- [📄 License](#-license)
 
+---
 
-**Webiste:** https://devfordev.vercel.app
+## ✨ Features
 
+✅ **CPF Generator:** Instantly generates valid CPF numbers  
+✅ **CPF Validator:** Validates any CPF input using official algorithms  
+✅ **Password Generator:** Creates strong, customizable passwords  
+✅ **IP Generator:** Randomly generates valid IP addresses  
+✅ **User-Friendly UI:** Simple navigation with reusable components and modern design  
+✅ **Responsive Layout:** Fully functional on mobile and desktop devices
 
-## Features
+---
 
-- Generate and validate CPF
-- Generate passwords with lowercase, uppercase, numbers and symbols
-- Generate IP address
+## 🛠 Technologies Used
 
-## Run Locally
+- ⚛️ **React** + **TypeScript**
+- ⚡ **Vite**
+- 🎨 **Tailwind CSS**
+- 🧪 **Jest** for testing
+- 🧹 **ESLint** + **Prettier**
+- 🧰 **clsx**, **Class Variance Authority (CVA)** for conditional styling
 
-Clone the project
+---
+
+## 📦 Installation
+
+### ⚙ Requirements
+
+- Node.js (recommended LTS version)
+- PNPM (or NPM/Yarn)
+
+### 🔧 Steps
 
 ```bash
-  git clone https://github.com/Mathesu-veLi/dev-toolkit.git
+git clone https://github.com/your-username/dev-toolkit.git
+cd dev-toolkit
+pnpm install
 ```
 
-Go to the project directory
+---
+
+## ▶️ Running the Project
+
+Start the development server with:
 
 ```bash
-  cd dev-toolkit
+pnpm dev
 ```
 
-Install dependencies
+Then access: [http://localhost:5173](http://localhost:5173) (or your configured Vite port)
 
-```bash
-  npm install
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Reusable components (UI + tools)
+│   └── Cpf/          # CPF Generator and Validator
+├── containers/       # Main views: Home, Cpf, Ip, Password
+├── classes/          # CPF validation and generation logic
+├── lib/              # Utility functions
+├── App.tsx           # Main app component with routes
+├── main.tsx          # Entry point
+└── index.css         # Global styles using Tailwind
 ```
 
-Start the server
+---
 
-```bash
-  npm run start
+## 🎥 Demo
+
+You can watch a demo of the Dev Toolkit on YouTube:
+
+👉 [📽️ Watch demo](https://www.youtube.com/your-demo-link)
+
+---
+
+## 📄 License
+
+This project is licensed under the terms specified in the [`LICENSE`](./LICENSE) file.
+
+---
+
+Built with 💻 to streamline testing and automation for developers!
 ```
 
+---
 
-## Screenshots
-
-Home page:
-
-![Home page](https://i.ibb.co/YPpSZ7s/dev-home.png)
-
-
-CPF generator and validator page:
-
-![CPF page](https://i.ibb.co/wgQcDdR/dev-cpf.png)
-
-
-Password generator page:
-
-![Password page](https://i.ibb.co/Dr4pq9J/dev-password.png)
-
-
-IP generator page:
-
-![IP page](https://i.ibb.co/3fhZmDT/dev-ip.png)
-
-## Tech Stack
-
-**Client:** React, TailwindCSS, Shadcn/ui
-
+Se quiser, posso converter esse conteúdo em um arquivo `.md` e te enviar assim que os recursos voltarem ao normal. Deseja que eu te avise quando puder fazer isso?
