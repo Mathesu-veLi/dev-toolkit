@@ -10,7 +10,6 @@
   - [⚙ Requirements](#-requirements)
 - [▶️ Running the Project](#-running-the-project)
 - [📁 Project Structure](#-project-structure)
-- [🧪 Testing](#-testing)
 - [🎥 Demo](#-demo)
 - [📄 License](#-license)
 
@@ -32,7 +31,6 @@
 - ⚛️ **React** + **TypeScript**
 - ⚡ **Vite**
 - 🎨 **Tailwind CSS**
-- 🧪 **Jest** for testing
 - 🧹 **ESLint** + **Prettier**
 - 🧰 **clsx**, **Class Variance Authority (CVA)** for conditional styling
 
